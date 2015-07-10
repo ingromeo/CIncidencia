@@ -1,0 +1,90 @@
+<?php
+                            //for ($a = 0; $a < (count($lib)); $a++) {
+                                ?>
+                                <option value="<?php //echo ($lib[$a]['id_bien']); ?>"><?php //echo ($lib[$a]['descripcion_bien']); ?></option>
+                            <?php //} ?>
+                            
+                            <?php
+
+        //include_once '../util/config.php';
+
+        //$db = new DB_Class();
+
+ if(isset($_POST["idmarca"]))
+ {
+    $conexion= new mysqli("localhost","root","123","incidencias",3306);
+    $strConsulta = "select id_bien, descripcion_bien from bien where id_catb = ".$_POST["idmarca"];
+    //$result = $db->query($strConsulta);
+    $result = $conexion->query($strConsulta);
+    while( $fila = $result->fetch_array() )
+    {
+       $opciones.='<option value="'.$fila["id_bien"].'">'.$fila["descripcion_bien"].'</option>';
+    }
+     echo $opciones;
+ }
+?>
+
+
+<?php
+                            for ($a = 0; $a < (count($lic)); $a++) {
+                                ?>
+                                <option value="<?php echo ($lic[$a]['id_asuinc']); ?>"><?php echo ($lic[$a]['descripcion_asuinc']); ?></option>
+                            <?php } ?>
+                            
+                            
+                            <?php
+                            for ($a = 0; $a < (count($lil)); $a++) {
+                                ?>
+                                <option value="<?php echo ($lil[$a]['cliente']); ?>"><?php echo ($lil[$a]['cliente']); ?></option>
+                            <?php } ?>
+                            
+                            
+                            
+                            
+                            
+                            
+                            <script>
+function ocombo() {
+    var combo = document.getElementById("responsable");
+    var selected = combo.options[combo.selectedIndex].text;
+    document.getElementById("demo").value = selected;
+}
+</script>
+                            
+                    <tr>
+                  <td>Responsable:</td>
+<td style="width:250px;">
+	<div class="element-select">
+    <div class="item-cont">
+    <div class="large">
+    <span>
+    <select id="responsable" name="responsable" required="required" onchange="ocombo()">
+		<?php
+          for ($a = 0; $a < (count($lir)); $a++) {
+          ?>
+         <option value="<?php echo ($lir[$a]['idusuario']); ?>">
+         <?php echo ($lir[$a]['responsable']); ?></option>
+          <?php } ?>
+        </select>
+        <i></i><span class="icon-place"></span></span></div></div>
+     </div>    
+    </td>       
+
+    </tr>                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            

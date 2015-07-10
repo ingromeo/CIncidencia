@@ -1,0 +1,177 @@
+* { margin: 0; padding: 0; }
+
+body {
+/*font-family: "Droid Sans", Arial;*/
+/*background: url(../images/cyan_coffeegrass.jpg); */}
+
+.Navigation {    
+height: 84px;
+background: url(../img/Navigation.png)  repeat-x;
+border-bottom: 1px solid #919191;
+}
+
+#NavigationInside {
+padding-left: 15px;
+width: 945px;
+margin: 0 auto; }
+
+.Navigation ul li {
+float: left;
+position: relative;
+list-style: none;
+padding: 17px 10px; }
+
+.Navigation ul li a {
+font-size: 14px;
+font-weight: bold;
+color: white;
+text-decoration: none;
+text-shadow: 0 1px 2px black; }
+
+.Navigation ul li:hover {
+/*background: url(../img/hover.png) repeat-x;*/
+height: 43px;
+-webkit-box-shadow: 0 0px 2px black inset;
+padding: 20px 9px;
+border-left: 1px solid #a4a4a4;
+border-right: 1px solid #a4a4a4; }
+
+.Navigation ul li ul li:hover {
+background: none;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+height: auto;
+border: none; }
+
+.Navigation ul li .horizontal li { padding: 14px 10px 14px 10px;  }
+
+.Navigation ul li .horizontal li:first-child { margin-left: -10px; }
+
+.Navigation ul li .horizontal li a {
+font-size: 12px;
+font-weight: normal;
+color: #c7c7c7; }
+
+.arrow-up {
+width: 0;
+height: 0;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-bottom: 15px solid #6a6a63;
+position: absolute;
+left: 20px;
+top: -15px; }
+
+.Navigation ul li ul li .extended {
+position: absolute;
+top: 45px;
+left: 0;
+width: 220px;
+background: url(../img/dropdownback.png);
+z-index: 1000;
+-moz-box-shadow: 0 0px 8px rgba(0,0,0,0.8);
+-webkit-box-shadow: 0 0px 8px rgba(0,0,0,0.8);
+box-shadow: 0 0 8px black;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+border: 1px solid white;
+display: none;
+color: white; }
+
+.Navigation ul li ul li .extended img {
+display: block;
+margin: 5px auto 15px auto;
+-webkit-box-reflect:below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(rgba(255,255,255,0.5))); }
+
+.Navigation ul li ul li .extended p {
+padding: 10px;
+font-size: 11px;
+line-height: 17px;
+text-shadow: 0 1px 1px black; }
+
+.Navigation ul li ul li .extended h2, .Navigation ul li .ultraNav h2 {
+padding-top: 10px;
+padding-left: 10px;
+font-size: 16px;
+text-shadow: 0 1px 2px black;
+color: white;
+background: url(../img/headerback.png) repeat-x;
+height: 20px;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;  }
+
+.Navigation ul li ul li .extended span {
+padding-left: 10px;
+font-size: 11px; }
+
+.Navigation ul li ul li .extended ul.smallNav {
+border-top: 1px solid rgba(141,141,141,0.50);
+padding: 10px;
+height: 100px;  }
+
+.Navigation ul li ul li .extended ul.smallNav li {
+width: 200px; padding: 0;
+line-height: 22px;
+font-weight: bold;
+background: url(../img/linkback.png) no-repeat; }
+
+.Navigation ul li ul li .extended ul.smallNav li a {
+color: #c7c7c7;
+text-shadow: none; }
+
+.Navigation ul li ul li .extended ul.smallNav li a:hover { color: white; }
+
+.Navigation ul li ul li .extended ul.smallNav li:first-child { margin: 0; }
+
+.Navigation ul li ul li .extended ul.smallNav li:last-child { margin-bottom: 10px; }
+
+.Navigation ul li ul li:hover .extended { display: block; }
+
+.Navigation ul li ul li:hover a { color: white; }
+
+.Navigation ul li .ultraNav {
+position: absolute;
+top: 55px;
+left: -100px;
+width: 294px;
+background: url(../img/dropdownback.png);
+border: 1px solid white;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+z-index: 500;
+-moz-box-shadow: 0 3px 8px rgba(0,0,0,0.6);
+-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.6) box-shadow: 0 3px 8px black;
+display: none; }
+
+.ultraNav h2 { text-align: center; }
+
+.Navigation ul li .ultra {
+width: 130px;
+float: left;
+margin: 10px 0 10px 10px;
+-moz-box-shadow: 0 -1px 3px rgba(0,0,0,0.6);
+-webkit-box-shadow: 0 -1px 3px rgba(0,0,0,0.6);
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-bottom: none; }
+
+.Navigation ul li .ultra:first-child { margin: 0; }
+
+.Navigation ul li .ultraNav .arrow-up { left: 130px; }
+
+.Navigation ul li .ultra a {
+font-weight: normal;
+font-size: 12px;
+color: #c7c7c7;
+text-shadow: 0 1px 2px black; }
+
+.Navigation ul li .ultra li {
+width: 120px;
+line-height: 20px;
+padding: 3px 5px;
+background: url(../img/linkback.png) no-repeat;  }
+
+.Navigation ul li:hover .ultraNav { display: block; }

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="estado" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4d98ab87-b39b-4cf6-b90a-b68f0604315c">
+	<property name="ireport.zoom" value="6.0"/>
+	<property name="ireport.x" value="1055"/>
+	<property name="ireport.y" value="767"/>
+	<queryString>
+		<![CDATA[select * from estado where estado_estado = 1;]]>
+	</queryString>
+	<field name="id_estado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion_estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado_estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="9" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="89" splitType="Stretch">
+			<image>
+				<reportElement x="12" y="0" width="80" height="89" uuid="ef0a4c5a-0868-4980-a75d-a15fe74f493f"/>
+				<imageExpression><![CDATA["logo1.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="106" y="78" width="431" height="1" uuid="4a15d558-ff38-49d4-a340-0aee3a8013b1"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="106" y="11" width="429" height="56" uuid="5216927b-3c8e-4c0d-a6b5-843990ca6012"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE ESTADOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="217" y="12" width="59" height="20" uuid="46c53fbf-61de-4a71-9123-13ba46525959"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="12" width="85" height="20" uuid="01d9ead8-307c-4fd4-a1d9-dcc5c772dddc"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="184" y="12" width="133" height="20" forecolor="#CCCCCC" uuid="4499c67c-0cb7-4de3-895e-ab2f80e4d4e3"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="317" y="12" width="169" height="20" forecolor="#CCCCCC" uuid="9f8d05cf-f85d-4a63-872b-4077ab5cdcc7"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="229" y="10" width="69" height="20" uuid="f9ccc912-d7ea-4088-8621-0f2653094da8"/>
+				<textFieldExpression><![CDATA[$F{id_estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="10" width="117" height="20" uuid="a557ed74-2e8b-4009-be8d-bb228add6936"/>
+				<textFieldExpression><![CDATA[$F{descripcion_estado}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="184" y="31" width="302" height="1" uuid="ff0033e4-5f12-4fd4-a31d-aef3e14b7b0e"/>
+			</line>
+			<line>
+				<reportElement x="184" y="0" width="1" height="31" uuid="f60c0cd1-fbf9-465d-8081-594a9cde6c60"/>
+			</line>
+			<line>
+				<reportElement x="316" y="0" width="1" height="32" uuid="e7d3a61d-e6c6-43ee-89c9-dc630de8a966"/>
+			</line>
+			<line>
+				<reportElement x="486" y="0" width="1" height="32" uuid="c02aeb0c-6a09-49e0-b710-f4b90031ee24"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="369" y="0" width="100" height="20" uuid="96a3a218-ba54-4292-a96a-f8f9c9f113ad"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Fecha y Hora:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="414" y="20" width="100" height="20" uuid="655aacfd-04cf-43b3-9546-94968e7b35a8"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="10" width="100" height="20" uuid="87bf202c-0363-4563-b6c8-48fdce9c2fa0"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>
